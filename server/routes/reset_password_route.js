@@ -1,7 +1,7 @@
 // reset_password_route.js
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const mysql = require('mysql2');
 
 // Database configuration
