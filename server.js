@@ -10,25 +10,25 @@ console.log('Environment variables loaded:', {
     EMAIL_PASS: process.env.EMAIL_PASS ? '***exists***' : 'missing'
 });
 // Route imports
-const loginRoute = require('./routes/loginRoute');
-const resetPasswordRoute = require('./routes/reset_password_route');
-const forgotPasswordRoute = require('./routes/forgot_password_route');
-const checkSessionRoute = require('./routes/check_session_route');
-const passengerDashboardRoute = require('./routes/passenger_dashboard_route');
-const updateProfileRoute = require('./routes/update_profile_route');
-const changePasswordRoute = require('./routes/change_password_route');
-const logoutRoute = require('./routes/logout_route');
-const registerRoute = require('./routes/register_route');
-const checkUniqueRoute = require('./routes/check_unique_route');
-const getRidesRoute = require('./routes/get_rides_route'); 
-const updateRideStatusRoute = require('./routes/update_ride_status_route'); 
-const paymentAmountRoute = require('./routes/payment_amount_route');
-const processPaymentRoute = require('./routes/process_payment_route');
-const driverDashboardRoute = require('./routes/driver_dashboard_route');
-const adminLoginRoute = require('./routes/admin_login_route');
-const getUsersRoute = require('./routes/get_users_route');
-const adminDashboardRoute = require('./routes/admin_dashboard_route');
-const bookingRoutes = require('./routes/book_ride_route');
+const loginRoute = require('./server/routes/loginRoute');
+const resetPasswordRoute = require('./server/routes/reset_password_route');
+const forgotPasswordRoute = require('./server/routes/forgot_password_route');
+const checkSessionRoute = require('./server/routes/check_session_route');
+const passengerDashboardRoute = require('./server/routes/passenger_dashboard_route');
+const updateProfileRoute = require('./server/routes/update_profile_route');
+const changePasswordRoute = require('./server/routes/change_password_route');
+const logoutRoute = require('./server/routes/logout_route');
+const registerRoute = require('./server/routes/register_route');
+const checkUniqueRoute = require('./server/routes/check_unique_route');
+const getRidesRoute = require('./server/routes/get_rides_route'); 
+const updateRideStatusRoute = require('./server/routes/update_ride_status_route'); 
+const paymentAmountRoute = require('./server/routes/payment_amount_route');
+const processPaymentRoute = require('./server/routes/process_payment_route');
+const driverDashboardRoute = require('./server/routes/driver_dashboard_route');
+const adminLoginRoute = require('./server/routes/admin_login_route');
+const getUsersRoute = require('./server/routes/get_users_route');
+const adminDashboardRoute = require('./server/routes/admin_dashboard_route');
+const bookingRoutes = require('./server/routes/book_ride_route');
 
 
 const app = express();
