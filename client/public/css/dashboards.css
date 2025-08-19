@@ -1,0 +1,873 @@
+/* General Styling */
+body {
+  background-color: #333333;
+  color: #f8f8f8;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background-color: #1b1b1b;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+  padding: 0 20px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 15px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  color: #f8f8f8;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+  transform: translateX(5px);
+}
+
+.nav-item.active {
+  background-color: #ff0000;
+}
+
+.nav-item i {
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+.logout {
+  margin-top: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #f8f8f8;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  padding: 20px;
+  background-color: #333333;
+}
+
+/* Content Header */
+.content-header {
+  background-color: #1b1b1b;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-welcome {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-text h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #f8f8f8;
+}
+
+.welcome-text p {
+  margin: 5px 0 0;
+  color: #aaaaaa;
+  font-size: 1rem;
+}
+
+.quick-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.action-btn {
+  background-color: #ff0000;
+  border: none;
+  border-radius: 10px;
+  width: 90px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  color: white;
+}
+
+.action-btn:hover {
+  background-color: #910b0b;
+  transform: scale(1.1);
+}
+
+/* Dashboard Cards */
+.dashboard-grid {
+  display: grid;
+  gap: 25px;
+  padding: 0 10px;
+}
+
+.dashboard-card {
+  background-color: #1b1b1b;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  padding: 20px;
+  background-color: #1b1b1b;
+  border-bottom: 1px solid #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h2 {
+  margin: 0;
+  color: #ff0000;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+/* Available Rides Section */
+#available-rides-section {
+  margin-bottom: 25px;
+  padding-bottom: 50px;
+}
+
+#rides-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#rides-list .no-rides-message {
+  grid-column: 1 / -1;
+}
+
+
+.ride-info-header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#rides-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.ride-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ride-route {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f8f8f8;
+}
+
+.ride-schedule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  color: #aaaaaa;
+}
+
+.schedule-label {
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-inqueue {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* No rides message */
+.no-rides-message {
+  text-align: center;
+  padding: 40px 20px;
+  color: #aaaaaa;
+  background: #1b1b1b;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.no-rides-message i {
+  font-size: 48px;
+  color: #ff0000;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.no-rides-message p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Payment History Table Styling */
+.styled-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  margin-top: 10px;
+}
+
+/* Header Styling */
+.styled-table thead tr {
+  background-color: #ff0000;
+}
+
+.styled-table th {
+  color: #f8f8f8;
+  padding: 14px 20px;
+  font-weight: 600;
+  text-align: left;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* Row Styling */
+.styled-table tbody tr {
+  background-color: #414040;
+  margin-bottom: 8px;
+  border-left: 4px solid #ff0000;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #4b4b4b;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #757575;
+  transform: translateX(4px);
+  transition: all 0.3s ease;
+}
+
+.styled-table td {
+  padding: 16px 20px;
+  color: #f8f8f8;
+  font-size: 0.95rem;
+}
+
+/* Ride ID Styling */
+.styled-table td:first-child {
+  font-weight: 600;
+  color: #ff0000;
+}
+
+/* Amount Styling */
+.styled-table td:nth-child(2) {
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4CAF50;
+}
+
+/* Method Styling */
+.styled-table td:nth-child(3) {
+  text-transform: capitalize;
+  color: #f8f8f8;
+}
+
+/* Status Badge */
+.payment-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 0.5px;
+}
+
+.payment-status.pending {
+  background-color: #ffc107;
+  color: #000000;
+}
+
+.payment-status.completed {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.payment-status.failed {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+/* Action Button */
+.action-btn {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  width: 100px;
+  text-align: center;
+}
+
+.action-btn:hover {
+  background-color: #910b0b;
+  transform: scale(1.05);
+}
+
+/* No Data Styling */
+.styled-table .no-data {
+  text-align: center;
+  padding: 30px;
+  color: #aaaaaa;
+  background-color: #1b1b1b;
+}
+
+/* Payment Status Badges */
+.payment-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.payment-status.pending {
+  background-color: #ffc107;
+  color: #000000;
+}
+
+.payment-status.completed {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.payment-status.failed {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+/* Action Button */
+.action-btn {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #910b0b;
+  transform: scale(1.05);
+}
+
+/* Amount Styling */
+.styled-table td.amount {
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* No Data Styling */
+.styled-table .no-data {
+  text-align: center;
+  padding: 30px;
+  color: #aaaaaa;
+  font-style: italic;
+  background-color: #1b1b1b;
+  border-radius: 8px;
+}
+
+/* Help Section */
+.help-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.support-icon {
+  font-size: 2.5rem;
+  color: #ff0000;
+  margin-bottom: 15px;
+}
+
+.contact-support-btn {
+  background-color: #ff0000;
+  color: #f8f8f8;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.contact-support-btn:hover {
+  background-color: #910b0b;
+  transform: scale(1.05);
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #1b1b1b;
+  color: #f8f8f8;
+  margin: 5% auto;
+  padding: 20px 30px;
+  border-radius: 15px;
+  margin-top: 230px;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  color: #f8f8f8;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.close-btn {
+  color: #ff0000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ffffff;
+}
+
+/* Profile Grid Layout */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.password-info {
+  border-left: 1px solid #333;
+  padding-left: 2rem;
+}
+
+.password-info h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+/* Profile Picture Section */
+.profile-picture-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-picture-container img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #ff0000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+}
+
+.profile-upload-label {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: -20px;
+  margin-left: 140px;
+}
+
+.profile-upload-label:hover {
+  background-color: #910b0b;
+}
+
+/* Form Input Styling */
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background-color: #333333;
+  color: #f8f8f8;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #ff0000;
+  box-shadow: 0px 0px 5px #ff0000;
+}
+
+/* Password Field */
+.password-field {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 39px;
+  font-size: 1rem;
+  color: #f8f8f8;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+  color: #ff0000;
+}
+
+/* Save Button */
+.save-btn,
+.change-password-btn {
+  background-color: #ff0000;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 38%;
+  margin-left: 135px;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover,
+.change-password-btn:hover {
+  background-color: #910b0b;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.status-done {
+  background-color: #28a745;
+}
+
+.status-inqueue {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.status-scheduled {
+  background-color: #007bff;
+}
+
+/* Details Modal Specific Styling */
+#detailsModal .modal-content {
+  background-color: #1b1b1b;
+  max-width: 600px;
+  padding: 30px;
+}
+
+#detailsModal h2 {
+  color: #f8f8f8;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ff0000;
+}
+
+.modal-details {
+  display: grid;
+  gap: 15px;
+}
+
+.modal-details p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  margin: 0;
+  background-color: #252525;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-details p:hover {
+  background-color: #2a2a2a;
+}
+
+.modal-details strong {
+  color: #ff0000;
+  font-size: 1rem;
+  min-width: 140px;
+}
+
+.modal-details span {
+  color: #f8f8f8;
+  font-size: 1rem;
+  text-align: right;
+  font-weight: 500;
+}
+
+/* Status-specific styling */
+#modal-payment-status {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#modal-payment-status[data-status="pending"] {
+  background-color: #ffc107;
+  color: #000;
+}
+
+#modal-payment-status[data-status="completed"] {
+  background-color: #28a745;
+  color: #fff;
+}
+
+#modal-payment-status[data-status="failed"] {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Close button styling */
+#detailsModal .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #ff0000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#detailsModal .close-btn:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+
+.ride-info {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background-color: #696969;
+  border-radius: 8px;
+  border-left: 2px solid #ff0000;
+}
+
+.route-icon i {
+  color: #ff0000;
+  font-size: 1.2rem;
+}
+
+.ride-content {
+  flex: 1;
+}
+
+.route-text {
+  font-size: 1.1rem;
+  color: #f8f8f8;
+  margin-bottom: 10px;
+}
+
+.ride-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.label {
+  color: #f8f8f8;
+  font-weight: 600;
+}
+
+.value {
+  color: #aaaaaa;
+}
+
+.status {
+  color: #ffc107;
+}
+
+.status.in-queue {
+  color: #ffc107;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+  }
+  
+  .nav-item span {
+    display: none;
+  }
+  
+  .main-content {
+    margin-left: 70px;
+  }
+  
+  .user-welcome {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .password-info {
+    border-left: none;
+    border-top: 1px solid #333;
+    padding-left: 0;
+    padding-top: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .modal-content {
+    margin: 10% auto;
+  }
+}
